@@ -13,9 +13,3 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckod
     tar -zxf geckodriver-v0.31.0-linux64.tar.gz -C /usr/bin && \
     rm geckodriver-v0.31.0-linux64.tar.gz
 
-WORKDIR /app
-COPY ./ ./
-RUN pip install -r requirements.txt && \
-    rm -rf /.cache/pip
-
-CMD ["python", "main.py"]
